@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        /// zametki
+        /// zametki 345
         return view('home');
     }
 }
