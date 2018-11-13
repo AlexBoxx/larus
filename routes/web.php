@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('welcome/{locale}', function ($locale) {
+    App::setLocale($locale);
+
+});
 
 Route::group(['prefix'=>'admin', 'namespace' =>'Admin', 'middleware'=>'auth'], function(){
 	Route::get('/', 'DaschboardController@daschboard')->name('admin.index');
