@@ -26,7 +26,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default" ><i class="fa fa-envelope-o"></i></span>
           </div>
-          <input  type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="email" required autofocus placeholder="Введите Ваш Email">
+          <input  type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="email" required autofocus placeholder="{{ __('messages.Enter Your Email') }}">
 
           @if ($errors->has('email'))
               <span class="invalid-feedback" role="alert">
@@ -40,12 +40,12 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default" ><i class="fa fa-unlock-alt"></i></span>
           </div>
-          <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required placeholder="Введите Ваш пароль">
+          <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" required placeholder="{{ __('messages.Enter Your password') }}">
         </div>
 
         <div class="form-group form-check mt-3 ml-3">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
+          <label class="form-check-label" for="exampleCheck1">{{ __('messages.Remember me') }}</label>
         </div>
 
         <button type="submit" class="btn btn-success w-75" style="margin: 0.01em 10%;">{{ __('messages.Login') }}</button>

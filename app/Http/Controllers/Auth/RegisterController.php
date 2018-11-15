@@ -48,11 +48,15 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $messages = [
+                    'regex' => 'Поле :attribute должно содержать только латинские буквы и (или) цифры.',
+                ];
+
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|min:2|max:255|regex:/^[a-z]+$/i|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-        ]);
+            'password' => 'required|string|min:8|regex:/^[a-z]+$/i|confirmed',
+        ], $messages);
     }
 
     /**

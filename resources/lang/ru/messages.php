@@ -27,7 +27,13 @@ return [
     'Reset Password'=> 'Сбросить пароль',
     'Reset Password Notification'=> 'Уведомление сброса пароля',
     'Send Password Reset Link'=> 'Отправить ссылку сброса пароля',
-    'You are receiving this email because we received a password reset request for your account.'=> 'Вы получили это письмо, потому что мы получили запрос на сброс пароля для Вашей учетной записи.'
+    'You are receiving this email because we received a password reset request for your account.'=> 'Вы получили это письмо, потому что мы получили запрос на сброс пароля для Вашей учетной записи.',
+    'Enter Your password' => 'Введите Ваш пароль',
+    'Repeat Your password' => 'Повторите Ваш пароль',
+    'Enter Your Email' => 'Введите Ваш Email',
+    'Enter a name for the site' => 'Введите имя для сайта',
+    'Remember me' => 'Запомнить меня',
+    'Login via social networks' => 'Войти через соцсети'
       //'throttle' => 'Too many login attempts. Please try again in =>seconds seconds.',
 
 ];

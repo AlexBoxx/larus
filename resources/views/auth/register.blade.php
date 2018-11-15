@@ -8,7 +8,7 @@
 </div>
 <div class="card-body">
 
-  <div class="col-12 link text-center"> <h6>Регистрация по email</h6>
+  <div class="col-12 link text-center"> <h6>{{ __('messages.Register by Email') }}</h6>
     </div>
 
     <hr/>
@@ -21,7 +21,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default" ><i class="fa fa-user-circle-o"></i></span>
       </div>
-        <input  type="text" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="name" placeholder="Введите Ваше имя для сайта">
+        <input  type="text" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="name" placeholder="{{ __('messages.Enter a name for the site') }}">
 
       @if ($errors->has('name'))
           <span class="invalid-feedback" role="alert">
@@ -39,13 +39,13 @@
 
       @if ($errors->has('email'))
 
-          <input  id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" style="border: 1px solid red;" name="email" value="{{ old('email') }}" aria-label="Small" aria-describedby="inputGroup-sizing-sm" autofocus placeholder="Введите Ваш Email">
+          <input  id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" style="border: 1px solid red;" name="email" value="{{ old('email') }}" aria-label="Small" aria-describedby="inputGroup-sizing-sm" autofocus placeholder="{{ __('messages.Enter Your Email') }}">
           <span class="invalid-feedback" role="alert">
               {{ $errors->first('email') }}
           </span>
 
           @else
-          <input  id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Введите Ваш Email">
+          <input  id="email" type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="{{ __('messages.Enter Your Email') }}">
       @endif
 
     </div>
@@ -56,7 +56,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default" ><i class="fa fa-unlock-alt"></i></span>
       </div>
-      <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Введите Ваш пароль">
+      <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" id="password" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="{{ __('messages.Enter Your password') }}">
 
       @if ($errors->has('password'))
           <span class="invalid-feedback" role="alert">
@@ -72,7 +72,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default" ><i class="fa fa-unlock-alt"></i></span>
       </div>
-      <input type="password" class="form-control" name="password_confirmation" id="password-confirm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Повторите Ваш пароль">
+      <input type="password" class="form-control" name="password_confirmation" id="password-confirm" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="{{ __('messages.Repeat Your password') }}">
 
     </div>
 
@@ -81,7 +81,7 @@
 
   </form>
 
-  <p class="text-center mt-3"><a href="{{ route('login') }}" class="btn btn-outline-blue">Войти через соцсети</a></p>
+  <p class="text-center mt-3"><a href="{{ route('login') }}" class="btn btn-outline-blue">{{ __('messages.Login via social networks') }}</a></p>
 
 
 </div>
