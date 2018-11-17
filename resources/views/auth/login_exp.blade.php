@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h5>Проверка проверки</h5>
+<h5>Проверка проверки </h5>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
